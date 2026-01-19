@@ -35,17 +35,25 @@
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Register = new System.Windows.Forms.Button();
+            this.CB_ShowPassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(649, 267);
+            this.btn_Login.BackColor = System.Drawing.Color.Black;
+            this.btn_Login.FlatAppearance.BorderSize = 0;
+            this.btn_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Login.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Login.Location = new System.Drawing.Point(606, 267);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(94, 40);
+            this.btn_Login.Size = new System.Drawing.Size(137, 40);
             this.btn_Login.TabIndex = 11;
             this.btn_Login.Text = "Login";
-            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // label2
@@ -70,6 +78,7 @@
             // 
             this.txt_Passwoord.Location = new System.Drawing.Point(399, 199);
             this.txt_Passwoord.Name = "txt_Passwoord";
+            this.txt_Passwoord.PasswordChar = '*';
             this.txt_Passwoord.Size = new System.Drawing.Size(344, 22);
             this.txt_Passwoord.TabIndex = 8;
             // 
@@ -82,7 +91,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.btn_Register);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
@@ -91,19 +100,38 @@
             // 
             // btn_Register
             // 
-            this.btn_Register.Location = new System.Drawing.Point(50, 382);
+            this.btn_Register.BackColor = System.Drawing.Color.Black;
+            this.btn_Register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Register.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Register.ForeColor = System.Drawing.Color.White;
+            this.btn_Register.Location = new System.Drawing.Point(36, 375);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(259, 40);
             this.btn_Register.TabIndex = 6;
             this.btn_Register.Text = "Register";
-            this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.UseVisualStyleBackColor = false;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
+            // 
+            // CB_ShowPassword
+            // 
+            this.CB_ShowPassword.AutoSize = true;
+            this.CB_ShowPassword.Location = new System.Drawing.Point(399, 227);
+            this.CB_ShowPassword.Name = "CB_ShowPassword";
+            this.CB_ShowPassword.Size = new System.Drawing.Size(125, 20);
+            this.CB_ShowPassword.TabIndex = 12;
+            this.CB_ShowPassword.Text = "Show Password";
+            this.CB_ShowPassword.UseVisualStyleBackColor = true;
+            this.CB_ShowPassword.CheckedChanged += new System.EventHandler(this.CB_ShowPassword_CheckedChanged);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CB_ShowPassword);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -111,7 +139,9 @@
             this.Controls.Add(this.txt_Username);
             this.Controls.Add(this.panel1);
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,6 +157,7 @@
         private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Register;
+        private System.Windows.Forms.CheckBox CB_ShowPassword;
     }
 }
 

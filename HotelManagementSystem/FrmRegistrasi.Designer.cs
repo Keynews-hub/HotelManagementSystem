@@ -43,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.btn_Sign_In);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
@@ -52,12 +52,18 @@
             // 
             // btn_Sign_In
             // 
+            this.btn_Sign_In.BackColor = System.Drawing.Color.Black;
+            this.btn_Sign_In.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Sign_In.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Sign_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sign_In.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sign_In.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_Sign_In.Location = new System.Drawing.Point(50, 382);
             this.btn_Sign_In.Name = "btn_Sign_In";
             this.btn_Sign_In.Size = new System.Drawing.Size(259, 40);
             this.btn_Sign_In.TabIndex = 6;
             this.btn_Sign_In.Text = "Sign In";
-            this.btn_Sign_In.UseVisualStyleBackColor = true;
+            this.btn_Sign_In.UseVisualStyleBackColor = false;
             this.btn_Sign_In.Click += new System.EventHandler(this.btn_Sign_In_Click);
             // 
             // txt_Username
@@ -95,12 +101,19 @@
             // 
             // btn_Sign_Up
             // 
-            this.btn_Sign_Up.Location = new System.Drawing.Point(657, 341);
+            this.btn_Sign_Up.BackColor = System.Drawing.Color.Black;
+            this.btn_Sign_Up.FlatAppearance.BorderSize = 0;
+            this.btn_Sign_Up.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Sign_Up.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Sign_Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sign_Up.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sign_Up.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Sign_Up.Location = new System.Drawing.Point(603, 341);
             this.btn_Sign_Up.Name = "btn_Sign_Up";
-            this.btn_Sign_Up.Size = new System.Drawing.Size(94, 40);
+            this.btn_Sign_Up.Size = new System.Drawing.Size(136, 40);
             this.btn_Sign_Up.TabIndex = 5;
             this.btn_Sign_Up.Text = "Sign Up";
-            this.btn_Sign_Up.UseVisualStyleBackColor = true;
+            this.btn_Sign_Up.UseVisualStyleBackColor = false;
             this.btn_Sign_Up.Click += new System.EventHandler(this.btn_Sign_Up_Click);
             // 
             // CB_Password
@@ -135,6 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_Confirm_Password);
