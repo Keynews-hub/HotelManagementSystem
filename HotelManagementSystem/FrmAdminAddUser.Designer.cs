@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_status = new System.Windows.Forms.ComboBox();
+            this.cb_role = new System.Windows.Forms.ComboBox();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -40,19 +42,17 @@
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.DataGridAdminAddUser = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridAdminAddUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cb_status);
+            this.panel1.Controls.Add(this.cb_role);
             this.panel1.Controls.Add(this.btn_clear);
             this.panel1.Controls.Add(this.btn_delete);
             this.panel1.Controls.Add(this.btn_update);
@@ -68,6 +68,24 @@
             this.panel1.Size = new System.Drawing.Size(285, 639);
             this.panel1.TabIndex = 0;
             // 
+            // cb_status
+            // 
+            this.cb_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_status.FormattingEnabled = true;
+            this.cb_status.Location = new System.Drawing.Point(15, 270);
+            this.cb_status.Name = "cb_status";
+            this.cb_status.Size = new System.Drawing.Size(253, 24);
+            this.cb_status.TabIndex = 12;
+            // 
+            // cb_role
+            // 
+            this.cb_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_role.FormattingEnabled = true;
+            this.cb_role.Location = new System.Drawing.Point(15, 206);
+            this.cb_role.Name = "cb_role";
+            this.cb_role.Size = new System.Drawing.Size(253, 24);
+            this.cb_role.TabIndex = 11;
+            // 
             // btn_clear
             // 
             this.btn_clear.BackColor = System.Drawing.Color.Black;
@@ -79,6 +97,7 @@
             this.btn_clear.TabIndex = 10;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_delete
             // 
@@ -122,7 +141,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(11, 255);
+            this.label3.Location = new System.Drawing.Point(11, 246);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 21);
             this.label3.TabIndex = 7;
@@ -180,40 +199,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.DataGridAdminAddUser);
             this.panel2.Location = new System.Drawing.Point(335, 36);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(765, 639);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // DataGridAdminAddUser
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(717, 550);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 217);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(253, 24);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(15, 292);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(253, 24);
-            this.comboBox2.TabIndex = 12;
+            this.DataGridAdminAddUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridAdminAddUser.Location = new System.Drawing.Point(24, 65);
+            this.DataGridAdminAddUser.Name = "DataGridAdminAddUser";
+            this.DataGridAdminAddUser.RowHeadersWidth = 51;
+            this.DataGridAdminAddUser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DataGridAdminAddUser.RowTemplate.Height = 24;
+            this.DataGridAdminAddUser.Size = new System.Drawing.Size(717, 550);
+            this.DataGridAdminAddUser.TabIndex = 11;
             // 
             // FrmAdminAddUser
             // 
@@ -225,10 +226,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmAdminAddUser";
             this.Text = "FrmAdminAddUser";
+            this.Load += new System.EventHandler(this.FrmAdminAddUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridAdminAddUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,9 +248,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridAdminAddUser;
         private System.Windows.Forms.Button btn_clear;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cb_role;
+        private System.Windows.Forms.ComboBox cb_status;
     }
 }

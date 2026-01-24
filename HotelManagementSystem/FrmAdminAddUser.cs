@@ -25,10 +25,9 @@ namespace HotelManagementSystem
         {
             string username = txt_username.Text;
             string password = txtpassword.Text;
-            string role = txtrole.Text;
-            string status = txtstatus.Text;
+          
 
-            if (username == "" || password == "" || role == "" || status == "")
+            if (username == "" || password == "" || cb_role.SelectedIndex == -1 || cb_status.SelectedIndex == -1)
             {
                 MessageBox.Show("Please fill the blank fields", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -69,22 +68,92 @@ namespace HotelManagementSystem
                             {
                                 comand.Parameters.AddWithValue("@usern", username.Trim());
                                 comand.Parameters.AddWithValue("@pass", password.Trim());
-                                comand.Parameters.AddWithValue("@role", role.Trim());
-                                comand.Parameters.AddWithValue("@status", status.Trim());
+                                comand.Parameters.AddWithValue("@role", cb_role.SelectedItem.ToString());
+                                comand.Parameters.AddWithValue("@status", cb_status.SelectedItem.ToString());
+                                
                                
                                 DateTime today = DateTime.Now;
-                                comand.Parameters.AddWithValue("regDate", today);
+                                comand.Parameters.AddWithValue("@regDate", today);
 
                                 comand.ExecuteNonQuery();
 
                                 MessageBox.Show("User add Successfully", "Message Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
-
-
                     }
                 }
             }
+        }
+
+        private void combo_role()
+        {
+            SqlConnection connect = new SqlConnection(connection);
+            connect.Open();
+
+            string query = "SELECT * FROM ROLE";
+            SqlCommand comand = new SqlCommand();
+            comand.Connection = connect;
+            comand.CommandText = query;
+            comand.CommandType = CommandType.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(comand);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            foreach (DataRow dr in table.Rows)
+            {
+                cb_role.Items.Add(dr[1].ToString());
+            }
+            comand.ExecuteNonQuery();
+            connect.Close();
+
+
+        }
+
+        private void combo_status()
+        {
+            SqlConnection connect = new SqlConnection(connection);
+            connect.Open();
+
+            string query = "SELECT * FROM STATUS";
+            SqlCommand comand = new SqlCommand();
+            comand.Connection = connect;
+            comand.CommandText = query;
+            comand.CommandType = CommandType.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(comand);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            foreach (DataRow dr in table.Rows)
+            {
+                cb_status.Items.Add(dr[1].ToString());
+            }
+            comand.ExecuteNonQuery();
+            connect.Close();
+
+        }
+        private void FrmAdminAddUser_Load(object sender, EventArgs e)
+        {
+            combo_role();
+            combo_status();
+
+            userData uData = new userData();
+            DataGridAdminAddUser.DataSource = uData.getUserData();
+            
+            
+        }
+
+        public void clear()
+        {
+            txt_username.Text = "";
+            txtpassword.Text = "";
+            cb_role.SelectedIndex = -1;
+            cb_status.SelectedIndex = -1;
+        }
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }
