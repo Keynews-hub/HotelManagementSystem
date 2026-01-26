@@ -110,6 +110,7 @@
             this.btn_delete.TabIndex = 9;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -122,6 +123,7 @@
             this.btn_update.TabIndex = 8;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_add
             // 
@@ -215,12 +217,13 @@
             this.DataGridAdminAddUser.RowTemplate.Height = 24;
             this.DataGridAdminAddUser.Size = new System.Drawing.Size(717, 550);
             this.DataGridAdminAddUser.TabIndex = 11;
+            this.DataGridAdminAddUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAdminAddUserCellClick);
             // 
             // FrmAdminAddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1130, 687);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

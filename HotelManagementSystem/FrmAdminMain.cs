@@ -26,5 +26,19 @@ namespace HotelManagementSystem
                 this.Hide();
             }
         }
+
+        private void btn_Add_User_Click(object sender, EventArgs e)
+        {
+            FrmAdminAddUser addUser = new FrmAdminAddUser();
+            addUser.Show();
+            this.Hide();
+        }
+
+        private void btn_rooms_Click(object sender, EventArgs e)
+        {
+            FrmRooms addRooms = new FrmRooms();
+            addRooms.Show();
+            this.Hide();
+        }
     }
 }

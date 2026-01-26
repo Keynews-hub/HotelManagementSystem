@@ -30,38 +30,38 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_dashbooard = new System.Windows.Forms.Button();
-            this.btn_Add_User = new System.Windows.Forms.Button();
+            this.btn_Costumer = new System.Windows.Forms.Button();
             this.btn_Log_Out = new System.Windows.Forms.Button();
             this.btn_rooms = new System.Windows.Forms.Button();
-            this.btn_Costumer = new System.Windows.Forms.Button();
+            this.btn_Add_User = new System.Windows.Forms.Button();
+            this.btn_dashbooard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,37 +78,21 @@
             this.panel1.Size = new System.Drawing.Size(207, 619);
             this.panel1.TabIndex = 0;
             // 
-            // btn_dashbooard
+            // btn_Costumer
             // 
-            this.btn_dashbooard.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_dashbooard.FlatAppearance.BorderSize = 0;
-            this.btn_dashbooard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btn_dashbooard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btn_dashbooard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dashbooard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashbooard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_dashbooard.Location = new System.Drawing.Point(12, 174);
-            this.btn_dashbooard.Name = "btn_dashbooard";
-            this.btn_dashbooard.Size = new System.Drawing.Size(164, 45);
-            this.btn_dashbooard.TabIndex = 0;
-            this.btn_dashbooard.Text = "Dashboard";
-            this.btn_dashbooard.UseVisualStyleBackColor = false;
-            // 
-            // btn_Add_User
-            // 
-            this.btn_Add_User.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Add_User.FlatAppearance.BorderSize = 0;
-            this.btn_Add_User.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btn_Add_User.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btn_Add_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add_User.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add_User.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Add_User.Location = new System.Drawing.Point(12, 246);
-            this.btn_Add_User.Name = "btn_Add_User";
-            this.btn_Add_User.Size = new System.Drawing.Size(164, 45);
-            this.btn_Add_User.TabIndex = 1;
-            this.btn_Add_User.Text = "Add User";
-            this.btn_Add_User.UseVisualStyleBackColor = false;
+            this.btn_Costumer.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Costumer.FlatAppearance.BorderSize = 0;
+            this.btn_Costumer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btn_Costumer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btn_Costumer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Costumer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Costumer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Costumer.Location = new System.Drawing.Point(12, 373);
+            this.btn_Costumer.Name = "btn_Costumer";
+            this.btn_Costumer.Size = new System.Drawing.Size(164, 45);
+            this.btn_Costumer.TabIndex = 4;
+            this.btn_Costumer.Text = "Costumers";
+            this.btn_Costumer.UseVisualStyleBackColor = false;
             // 
             // btn_Log_Out
             // 
@@ -141,22 +125,40 @@
             this.btn_rooms.TabIndex = 2;
             this.btn_rooms.Text = "Romms";
             this.btn_rooms.UseVisualStyleBackColor = false;
+            this.btn_rooms.Click += new System.EventHandler(this.btn_rooms_Click);
             // 
-            // btn_Costumer
+            // btn_Add_User
             // 
-            this.btn_Costumer.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Costumer.FlatAppearance.BorderSize = 0;
-            this.btn_Costumer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btn_Costumer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btn_Costumer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Costumer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Costumer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Costumer.Location = new System.Drawing.Point(12, 373);
-            this.btn_Costumer.Name = "btn_Costumer";
-            this.btn_Costumer.Size = new System.Drawing.Size(164, 45);
-            this.btn_Costumer.TabIndex = 4;
-            this.btn_Costumer.Text = "Costumers";
-            this.btn_Costumer.UseVisualStyleBackColor = false;
+            this.btn_Add_User.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Add_User.FlatAppearance.BorderSize = 0;
+            this.btn_Add_User.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btn_Add_User.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btn_Add_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add_User.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add_User.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Add_User.Location = new System.Drawing.Point(12, 246);
+            this.btn_Add_User.Name = "btn_Add_User";
+            this.btn_Add_User.Size = new System.Drawing.Size(164, 45);
+            this.btn_Add_User.TabIndex = 1;
+            this.btn_Add_User.Text = "Add User";
+            this.btn_Add_User.UseVisualStyleBackColor = false;
+            this.btn_Add_User.Click += new System.EventHandler(this.btn_Add_User_Click);
+            // 
+            // btn_dashbooard
+            // 
+            this.btn_dashbooard.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_dashbooard.FlatAppearance.BorderSize = 0;
+            this.btn_dashbooard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btn_dashbooard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btn_dashbooard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dashbooard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashbooard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_dashbooard.Location = new System.Drawing.Point(12, 174);
+            this.btn_dashbooard.Name = "btn_dashbooard";
+            this.btn_dashbooard.Size = new System.Drawing.Size(164, 45);
+            this.btn_dashbooard.TabIndex = 0;
+            this.btn_dashbooard.Text = "Dashboard";
+            this.btn_dashbooard.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -211,6 +213,15 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Total Profit :";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 52);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 64);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.SteelBlue;
@@ -243,6 +254,15 @@
             this.label3.Size = new System.Drawing.Size(127, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Today Profit :";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 52);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(79, 64);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // panel5
             // 
@@ -277,6 +297,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Available Rooms :";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(3, 52);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(79, 64);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SteelBlue;
@@ -310,33 +339,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Staff :";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 52);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 64);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 52);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(79, 64);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 52);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(79, 64);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -350,7 +352,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1170, 616);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -361,15 +363,15 @@
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

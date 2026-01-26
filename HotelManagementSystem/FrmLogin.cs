@@ -88,7 +88,7 @@ namespace HotelManagementSystem
 
             if (username == "" || password == "")
             {
-                MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
