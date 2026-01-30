@@ -60,9 +60,30 @@ namespace HotelManagementSystem
                         {
                             MessageBox.Show("Login Successfuly", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            FrmAdminMain adminMain = new FrmAdminMain();
-                            adminMain.Show();
-                            this.Hide();
+                            string selectRole = "SELECT role FROM users WHERE username = @usern AND password = @pass";
+
+                            using (SqlCommand roleCommand = new SqlCommand(selectRole, connect))
+                            {
+                                roleCommand.Parameters.AddWithValue("@usern", username.Trim());
+                                roleCommand.Parameters.AddWithValue("@pass", password.Trim());
+
+                                string userRole = roleCommand.ExecuteScalar().ToString();
+
+                                if (userRole == "Admin")
+                                {
+                                    FrmAdminMain adminMain = new FrmAdminMain();
+                                    adminMain.Show();
+                                    this.Hide();
+
+                                }
+                                else if (userRole == "Staff")
+                                {
+                                    FrmStaffMain staffMain = new FrmStaffMain();
+                                    staffMain.Show();
+                                    this.Hide();
+                                }
+                            }
+                           
                         }
                         else
                         {
