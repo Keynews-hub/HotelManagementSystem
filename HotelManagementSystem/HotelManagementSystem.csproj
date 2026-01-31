@@ -64,6 +64,12 @@
     <Compile Include="FrmAdminMain.Designer.cs">
       <DependentUpon>FrmAdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientInfo.Designer.cs">
+      <DependentUpon>FrmClientInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,7 @@
     <Compile Include="FrmStaffMain.Designer.cs">
       <DependentUpon>FrmStaffMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="hotelData.cs" />
     <Compile Include="mdi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdminMain.resx">
       <DependentUpon>FrmAdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientInfo.resx">
+      <DependentUpon>FrmClientInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

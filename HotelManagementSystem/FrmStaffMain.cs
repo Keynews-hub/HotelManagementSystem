@@ -66,7 +66,11 @@ namespace HotelManagementSystem
             if (price < 0)
             {
                 MessageBox.Show("Something went wrong", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                list_price.Text = "0";
+                list_price.Text = price.ToString();
+            }
+            else if (price == 0)
+            {
+                list_price.Text = price.ToString();
             }
             else
             {
@@ -75,6 +79,47 @@ namespace HotelManagementSystem
 
             }
             //Console.WriteLine(days);
+
+        }
+
+        private void btn_book_Click(object sender, EventArgs e)
+        {
+            if (price >= 0 || list_price.Text == "0")
+            {
+                MessageBox.Show("Please fill the form correctly", "Message Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            else if (list_status.Text != "Active")
+            { 
+                MessageBox.Show("This Room is unavailable", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error );
+            }
+            else
+            {
+                hotelData.roomID = list_roomID.Text;
+                hotelData.fromDate = date_bookFrom.Value;
+                hotelData.toDate = date_bookTo.Value;
+                hotelData.price = list_price.Text;
+
+                try
+                {
+                    FrmClientInfo frmClient = new FrmClientInfo();
+                    frmClient.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+               
+        }
+
+        public void clearFields()
+        { 
+        
+        }
+        private void clear_Click(object sender, EventArgs e)
+        {
 
         }
     }
