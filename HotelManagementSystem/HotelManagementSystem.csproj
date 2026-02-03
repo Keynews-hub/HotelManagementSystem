@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="customerData.cs" />
     <Compile Include="FrmAdminAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAdminAddUser.Designer.cs">
       <DependentUpon>FrmAdminAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminCutomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminCutomer.Designer.cs">
+      <DependentUpon>FrmAdminCutomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAdminDashboard.cs">
       <SubType>Form</SubType>
@@ -107,6 +114,9 @@
     <Compile Include="userData.cs" />
     <EmbeddedResource Include="FrmAdminAddUser.resx">
       <DependentUpon>FrmAdminAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminCutomer.resx">
+      <DependentUpon>FrmAdminCutomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdminDashboard.resx">
       <DependentUpon>FrmAdminDashboard.cs</DependentUpon>
