@@ -142,6 +142,16 @@ namespace HotelManagementSystem
             
         }
 
+        public void refreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+            displayData();
+        }
+
         public void displayData()
         {
 

@@ -19,14 +19,25 @@ namespace HotelManagementSystem
 
         private void FrmAdminCutomer_Load(object sender, EventArgs e)
         {
-        
+            displayCustomer();
         }
         
 
+        public void refreshData()
+        {
+            if(InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+            
+            displayCustomer();
+        }
         public void displayCustomer()
         { 
             customerData cData = new customerData();
             List<customerData> clist = cData.listCustomerData();
+            GridViewAdminCustomer.DataSource = clist;
         }
     }
 }

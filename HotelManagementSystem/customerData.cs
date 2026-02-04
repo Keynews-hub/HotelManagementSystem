@@ -24,15 +24,16 @@ namespace HotelManagementSystem
         public string price { set; get; }
         public string statusPayment { set; get; }
         public string status {  set; get; }
-        public DateTime checkIn { set; get; }
-        public DateTime checkOut { set; get; }
-        public DateTime BookDate { set; get; }
+        public string checkIn { set; get; }
+        public string checkOut { set; get; }
+        public string BookDate { set; get; }
 
         public List<customerData> listCustomerData()
         {
             List<customerData> listData = new List<customerData>();
             using (SqlConnection connect = new SqlConnection(connection))
             {
+                connect.Open();
                 string showQuery = @"SELECT * FROM customers";
 
                 using (SqlCommand cmd = new SqlCommand(showQuery, connect))
@@ -53,9 +54,9 @@ namespace HotelManagementSystem
                         data.price = reader["price"].ToString();
                         data.statusPayment = reader["status_payment"].ToString();
                         data.status = reader["status"].ToString();
-                        data.checkIn = (DateTime)reader["date_from"];
-                        data.checkOut = (DateTime)reader["data_to"];
-                        data.BookDate = (DateTime)reader["date"];
+                        data.checkIn = reader["date_from"].ToString();
+                        data.checkOut = reader["date_to"].ToString();
+                        data.BookDate = reader["date_booked"].ToString(); ;
 
                         listData.Add(data);
                     }

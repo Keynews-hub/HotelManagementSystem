@@ -93,6 +93,7 @@
             this.btn_Costumer.TabIndex = 4;
             this.btn_Costumer.Text = "Costumers";
             this.btn_Costumer.UseVisualStyleBackColor = false;
+            this.btn_Costumer.Click += new System.EventHandler(this.btn_Costumer_Click);
             // 
             // btn_Log_Out
             // 
@@ -159,6 +160,7 @@
             this.btn_dashbooard.TabIndex = 0;
             this.btn_dashbooard.Text = "Dashboard";
             this.btn_dashbooard.UseVisualStyleBackColor = false;
+            this.btn_dashbooard.Click += new System.EventHandler(this.btn_dashbooard_Click);
             // 
             // panel3
             // 
@@ -359,6 +361,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmAdminMain";
             this.Text = "FrmAdminMain";
+            this.Load += new System.EventHandler(this.FrmAdminMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);

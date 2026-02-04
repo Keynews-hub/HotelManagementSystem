@@ -42,7 +42,6 @@
             this.list_roomID = new System.Windows.Forms.Label();
             this.date_bookFrom = new System.Windows.Forms.DateTimePicker();
             this.clear = new System.Windows.Forms.Button();
-            this.btn_print = new System.Windows.Forms.Button();
             this.btn_book = new System.Windows.Forms.Button();
             this.btn_check = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,7 +72,6 @@
             this.panel1.Controls.Add(this.list_roomID);
             this.panel1.Controls.Add(this.date_bookFrom);
             this.panel1.Controls.Add(this.clear);
-            this.panel1.Controls.Add(this.btn_print);
             this.panel1.Controls.Add(this.btn_book);
             this.panel1.Controls.Add(this.btn_check);
             this.panel1.Controls.Add(this.label6);
@@ -216,15 +214,6 @@
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
-            // btn_print
-            // 
-            this.btn_print.Location = new System.Drawing.Point(37, 578);
-            this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(292, 46);
-            this.btn_print.TabIndex = 11;
-            this.btn_print.Text = "Print";
-            this.btn_print.UseVisualStyleBackColor = true;
-            // 
             // btn_book
             // 
             this.btn_book.Location = new System.Drawing.Point(33, 513);
@@ -340,7 +329,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.Button btn_print;
         private System.Windows.Forms.Button btn_book;
         private System.Windows.Forms.Button btn_check;
         private System.Windows.Forms.Label label6;

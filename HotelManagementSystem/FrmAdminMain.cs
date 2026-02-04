@@ -31,14 +31,37 @@ namespace HotelManagementSystem
         {
             FrmAdminAddUser addUser = new FrmAdminAddUser();
             addUser.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void btn_rooms_Click(object sender, EventArgs e)
         {
             FrmRooms addRooms = new FrmRooms();
             addRooms.Show();
-            this.Hide();
+           // this.Hide();
+        }
+
+        private void FrmAdminMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Costumer_Click(object sender, EventArgs e)
+        {
+            FrmAdminCutomer customer = new FrmAdminCutomer();
+            customer.Show();
+        }
+
+        private void btn_dashbooard_Click(object sender, EventArgs e)
+        {
+            FrmAdminDashboard dashboard = new FrmAdminDashboard();
+            
+            dashboard.Show();
+
+            if (dashboard != null)
+            {
+                dashboard.refreshData();
+            }
         }
     }
 }

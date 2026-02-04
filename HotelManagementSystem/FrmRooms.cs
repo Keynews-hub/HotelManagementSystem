@@ -43,6 +43,17 @@ namespace HotelManagementSystem
             combo_type();
             displayData();
         }
+
+        public void refreshData()
+        {
+            if(InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+            
+            displayData();
+        }
         public void displayData()
         {
             roomsData rooms = new roomsData();
